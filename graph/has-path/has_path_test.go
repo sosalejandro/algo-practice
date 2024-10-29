@@ -48,6 +48,7 @@ func TestHasPath(t *testing.T) {
 				"A": {"B"},
 				"B": {"C"},
 				"C": {"D"},
+				"D": {},
 			},
 			src:      "A",
 			dst:      "D",
@@ -84,6 +85,28 @@ func TestHasPath(t *testing.T) {
 			src:      "X",
 			dst:      "C",
 			expected: false,
+		},
+		{
+			name: "Non-Existent Destination Node",
+			graph: map[string][]string{
+				"A": {"B"},
+				"B": {"C"},
+			},
+			src:      "A",
+			dst:      "Y",
+			expected: false,
+		},
+		{
+			name: "Non-Existent Neighbor Node",
+			graph: map[string][]string{
+				"A": {"B"},
+				"B": {"C", "X"}, // "X" does not exist in the graph
+				"C": {"D"},
+				"D": {},
+			},
+			src:      "A",
+			dst:      "D",
+			expected: true,
 		},
 	}
 

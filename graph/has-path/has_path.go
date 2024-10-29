@@ -45,6 +45,14 @@ var StringItemFactory common.ItemFactory[string] = func(value string) common.Ite
 // The itemFactory parameter is used to create items for the transporter.
 // The function returns an error if the transporter encounters an error.
 func HasPath[T comparable](strategy graph.TraversalStrategy, g map[T][]T, src, dst T, itemFactory common.ItemFactory[T]) (bool, error) {
+	// Check if the source or destination node does not exist in the graph
+	if _, srcExists := g[src]; !srcExists {
+		return false, nil
+	}
+	if _, dstExists := g[dst]; !dstExists {
+		return false, nil
+	}
+
 	if src == dst {
 		return true, nil
 	}
@@ -71,6 +79,11 @@ func HasPath[T comparable](strategy graph.TraversalStrategy, g map[T][]T, src, d
 
 		// Explore neighbors of the current node
 		for _, neighbor := range g[current] {
+			// // Check if the neighbor exists in the graph
+			if _, neighborExists := g[neighbor]; !neighborExists {
+				continue
+			}
+
 			if neighbor == dst {
 				return true, nil
 			}
