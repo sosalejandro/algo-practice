@@ -1,8 +1,8 @@
 package bfs
 
 import (
+	"github.com/sosalejandro/algo-practice/data-structures/common"
 	simple_queue "github.com/sosalejandro/algo-practice/data-structures/simple-queue"
-	"github.com/sosalejandro/data-structures/common"
 )
 
 // QueueStringItem represents an item in the queue.

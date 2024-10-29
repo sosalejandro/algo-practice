@@ -1,8 +1,8 @@
 package has_path
 
 import (
+	"github.com/sosalejandro/algo-practice/data-structures/common"
 	"github.com/sosalejandro/algo-practice/graph"
-	"github.com/sosalejandro/data-structures/common"
 )
 
 // StringItem represents an item in the stack or queue.

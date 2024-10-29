@@ -3,7 +3,7 @@ package simple_queue
 import (
 	"errors"
 
-	"github.com/sosalejandro/data-structures/common"
+	"github.com/sosalejandro/algo-practice/data-structures/common"
 )
 
 // QueueItem represents an item that can be stored in the queue.

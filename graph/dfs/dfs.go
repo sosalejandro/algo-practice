@@ -1,8 +1,8 @@
 package dfs
 
 import (
+	"github.com/sosalejandro/algo-practice/data-structures/common"
 	simple_stack "github.com/sosalejandro/algo-practice/data-structures/simple-stack"
-	"github.com/sosalejandro/data-structures/common"
 )
 
 // StackStringItem represents an item in the stack.

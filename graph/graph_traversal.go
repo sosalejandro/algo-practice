@@ -1,9 +1,9 @@
 package graph
 
 import (
+	"github.com/sosalejandro/algo-practice/data-structures/common"
 	simple_queue "github.com/sosalejandro/algo-practice/data-structures/simple-queue"
 	simple_stack "github.com/sosalejandro/algo-practice/data-structures/simple-stack"
-	"github.com/sosalejandro/data-structures/common"
 )
 
 // TraversalStrategy defines the type of traversal strategy.

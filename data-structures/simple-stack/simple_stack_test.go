@@ -3,7 +3,7 @@ package simple_stack
 import (
 	"testing"
 
-	"github.com/sosalejandro/data-structures/common"
+	"github.com/sosalejandro/algo-practice/data-structures/common"
 )
 
 type IntItem struct {

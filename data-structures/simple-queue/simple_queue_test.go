@@ -3,7 +3,7 @@ package simple_queue
 import (
 	"testing"
 
-	"github.com/sosalejandro/data-structures/common"
+	"github.com/sosalejandro/algo-practice/data-structures/common"
 )
 
 type testStringItem struct {

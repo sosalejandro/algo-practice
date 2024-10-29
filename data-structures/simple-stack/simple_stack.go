@@ -3,7 +3,7 @@ package simple_stack
 import (
 	"errors"
 
-	"github.com/sosalejandro/data-structures/common"
+	"github.com/sosalejandro/algo-practice/data-structures/common"
 )
 
 // StackItem represents an item that can be stored in the stack.
