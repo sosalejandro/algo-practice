@@ -66,11 +66,34 @@ func TestHasPath(t *testing.T) {
 			expected: false,
 		},
 		{
-			name: "Graph with Cycles",
+			name: "Directional: Graph with Cycles",
 			graph: map[string][]string{
 				"A": {"B"},
 				"B": {"C"},
 				"C": {"A"},
+			},
+			src:      "A",
+			dst:      "C",
+			expected: true,
+		},
+		{
+			name: "Bidirectional: Graph with Cycles",
+			graph: map[string][]string{
+				"A": {"B", "C"},
+				"B": {"C", "A"},
+				"C": {"A", "B"},
+			},
+			src:      "A",
+			dst:      "C",
+			expected: true,
+		},
+		{
+			name: "Mixed directions: Graph with some Cycles",
+			graph: map[string][]string{
+				"A": {"D", "B", "C"},
+				"B": {"C", "A"},
+				"C": {"A", "B"},
+				"D": {"B"},
 			},
 			src:      "A",
 			dst:      "C",
